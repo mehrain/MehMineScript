@@ -2,7 +2,7 @@ import time
 from system.lib import minescript as m
 
 while True:
-    block = m.player_get_targeted_block()
+    block = m.player_get_targeted_block(max_distance=5)
     if block:
         print(f"Block at cursor: {block.type} at {block.position}")
     else:
